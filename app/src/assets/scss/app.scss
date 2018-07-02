@@ -5,6 +5,7 @@ body {
 
 * {
   box-sizing: border-box;
+  transition: .2s ease-out;
 }
 
 .container {
@@ -41,7 +42,11 @@ body {
   width: 100%;
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
-    width: 20%;
+  }
+  .column-wrap & {
+    @media screen and (min-width: 768px) {
+      width: 20%;
+    }
   }
 }
 

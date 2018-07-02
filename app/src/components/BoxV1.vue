@@ -7,7 +7,7 @@
     </div>
     <div class="box-info">{{boxData.weather[0].description}}</div>
     <div class="box-action">
-      <button-comp ButtonText="View 5 days" :ButtonLink=boxData.name />
+      <button-comp ButtonText="View 5 days" :ButtonCityName=boxData.name :ButtonCityCountry=boxData.sys.country />
     </div>
   </div><!-- /box-v1 -->
 </template>
@@ -35,9 +35,9 @@ export default {
   border-radius: 4px;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,.3);
   display: block;
+  overflow: hidden;
   position: relative;
   text-align: center;
-  overflow: hidden;
   &:hover {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,.3);
   }

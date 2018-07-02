@@ -58,7 +58,7 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {path: '/', component: Main},
-    {path: '/5GunlukTahmin/:name', component: SingleCityFiveDay},
+    {path: '/5GunlukTahmin/:name/:country', component: SingleCityFiveDay},
   ]
 })
 

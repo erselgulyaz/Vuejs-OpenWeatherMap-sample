@@ -8,11 +8,12 @@
   export default {
     props: {
       ButtonText : { type: String, required: true },
-      ButtonLink : { type: String },
+      ButtonCityName : { type: String },
+      ButtonCityCountry : { type: String },
     },
     computed: {
       getDetailLink() {
-        return `/5GunlukTahmin/${this.ButtonLink}`
+        return `/5GunlukTahmin/${this.ButtonCityName}/${this.ButtonCityCountry}`
       }
     }
   }
@@ -20,16 +21,16 @@
 
 <style lang="scss">
 .btn {
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  color: #000000;
   display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 38px;
   min-width: 120px;
   padding: 0 5px;
-  line-height: 38px;
-  border-radius: 10px;
   text-decoration: none;
-  font-size: 14px;
-  color: #000000;
-  border: 1px solid #ededed;
-  font-weight: bold;
   &:hover {
     background-color: #ededed;
   }
